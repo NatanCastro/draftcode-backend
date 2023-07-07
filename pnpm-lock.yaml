@@ -26,6 +26,9 @@ dependencies:
   rxjs:
     specifier: ^7.8.1
     version: 7.8.1
+  streamifier:
+    specifier: ^0.1.1
+    version: 0.1.1
 
 devDependencies:
   '@nestjs/cli':
@@ -52,6 +55,9 @@ devDependencies:
   '@types/node':
     specifier: 18.16.12
     version: 18.16.12
+  '@types/streamifier':
+    specifier: ^0.1.0
+    version: 0.1.0
   '@types/supertest':
     specifier: ^2.0.12
     version: 2.0.12
@@ -1272,6 +1278,12 @@ packages:
 
   /@types/stack-utils@2.0.1:
     resolution: {integrity: sha512-Hl219/BT5fLAaz6NDkSuhzasy49dwQS/DSdu4MdggFB8zcXv7vflBI3xp7FEmkmdDkBUI2bPUNeMttp2knYdxw==}
+    dev: true
+
+  /@types/streamifier@0.1.0:
+    resolution: {integrity: sha512-pAGnUJg5pMAKv5ctJudPaGJHEuU/tkgN/F3tC5kQ5YHKS5gpfRZVVmLHE8t3h8H4Nn2JMJxf6T7h4QvSL3H/ug==}
+    dependencies:
+      '@types/node': 18.16.12
     dev: true
 
   /@types/superagent@4.1.18:
@@ -4451,6 +4463,11 @@ packages:
   /statuses@2.0.1:
     resolution: {integrity: sha512-RwNA9Z/7PrK06rYLIzFMlaF+l73iwpzsqRIFgbMLbTcLD6cOao82TaWefPXQvB2fOC4AjuYSEndS7N/mTCbkdQ==}
     engines: {node: '>= 0.8'}
+
+  /streamifier@0.1.1:
+    resolution: {integrity: sha512-zDgl+muIlWzXNsXeyUfOk9dChMjlpkq0DRsxujtYPgyJ676yQ8jEm6zzaaWHFDg5BNcLuif0eD2MTyJdZqXpdg==}
+    engines: {node: '>=0.10'}
+    dev: false
 
   /streamsearch@1.1.0:
     resolution: {integrity: sha512-Mcc5wHehp9aXz1ax6bZUyY5afg9u2rv5cqQI3mRrYkGC8rW2hM02jWuwjtL++LS5qinSyhj2QfLyNsuc+VsExg==}
