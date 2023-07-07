@@ -4,8 +4,9 @@ import { CloudinaryService } from 'src/cloudinary/cloudinary.service';
 @Injectable()
 export class ImageUploadService {
   constructor(private cloudinaryService: CloudinaryService) {}
-  upload(file: Express.Multer.File) {
+  async upload(file: Express.Multer.File) {
     console.log(file);
-    this.cloudinaryService.uploadToCloudinary(file.path);
+    const savedFile = this.cloudinaryService.uploadToCloudinary(file);
+    return savedFile.then(({ url, public_id }) => ({ url, public_id }));
   }
 }
