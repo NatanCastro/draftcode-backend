@@ -12,9 +12,16 @@ export class CloudinaryService {
   }
 
   uploadToCloudinary = async (file: Express.Multer.File) => {
-    return v2.uploader.upload(file.path, {
-      folder: 'draft-project',
-    });
+    return v2.uploader.upload(
+      `data:${file.mimetype};base64:${file.buffer.toString('base64')}`,
+      {
+        folder: 'draft-project',
+        format: 'webp',
+        transformation: {
+          quality: 'auto',
+        },
+      },
+    );
   };
 
   deleteFromCloudinary = async (public_id: string) => {
